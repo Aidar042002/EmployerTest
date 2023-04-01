@@ -6,20 +6,29 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
+      <?php session_start(); ?>
       <div class="header">
       <h1>Определение видов программистов и ИТ, ПВК для определенного вида деятельности</h1>
           <div class="nav">
             <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Аутентификация</a></li>
+                    <li><a href="index.php">Главная</a></li>
+                    <li><a href="signIn.php">Аутентификация</a></li>
                     <li><a href="#">ПВК</a></li>
                     <li><a href="#">Тесты</a></li>
-                    <li><a href="#">Личный кабинет</a></li>
-                    <li><a href="#">Выход</a></li>
+                    <li><a href="account.php">Личный кабинет</a></li>
+                    <li><a href="exit.php">Выход</a></li>
             </ul>
           </div>
 
       </div>
+
+      <?php
+      if(!empty($_SESSION['message'])){
+        echo '<p class="msg">' . $_SESSION['message'] . '<p/>';
+      }
+      unset($_SESSION['message']);
+       ?>
+
       <div class="main">
           <div class="content">
             <ul>

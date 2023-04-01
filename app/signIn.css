@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+.header{
+  color:white;
+  background-color: black;
+  font-size: 24px;
+  text-align: center;
+}
+.main{
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  padding: 10px;
+}
+.main input{
+  font-size: 20px;
+}
+.main form{
+  border: 2px solid black;
+  padding: 20px;
+}
