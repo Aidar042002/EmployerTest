@@ -16,6 +16,8 @@ if (empty($myrow['password'])){
     if ($myrow['password']==$password) {
     $_SESSION['email']=$myrow['email'];
     $_SESSION['id']=$myrow['id'];
+    $_SESSION['pol']=$myrow['pol'];
+    $_SESSION['age']=$myrow['age'];
     $_SESSION['message']='Вы вошли.';
     header("Location:index.php");
     }

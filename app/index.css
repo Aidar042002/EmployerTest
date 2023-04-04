@@ -69,3 +69,7 @@ body {
   background-color: blue;
   text-align: center;
 }
+.table{
+  border:1px solid gray;
+  width:50%;
+}

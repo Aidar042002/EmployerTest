@@ -15,9 +15,25 @@
       <?php
         if(!empty($_SESSION['email']) && !empty($_SESSION['id'])) {
           echo "<p>Ваш личный кабинет.</p>";
+          echo "email:". '<br/>';
           $email=$_SESSION['email'];
+          echo $email . '<br/>';
+          echo "id:". '<br/>';
           $id = $_SESSION['id'];
-          echo $id . " " . $email;
+          echo $id . '<br/>';
+          echo 'pol:'. '<br/>';
+          $gender =$_SESSION['pol'];
+          echo $gender .'<br/>';
+          echo 'age:'. '<br/>';
+          $age =$_SESSION['age'];
+          echo $age . '<br/>';
+          require_once "bd.php";
+          $result = mysqli_query($db, "SELECT *FROM users where email='$email'");
+          $myrow = mysqli_fetch_array($result);
+          $_SESSION['admin']=$myrow['admin'];
+          if ($myrow['admin']==1) {
+            echo "status: admin";
+          }
         }
         else {
           echo "Вы не вошли." . '<a href="signIn.php">Войдите</a>';
