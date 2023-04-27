@@ -37,7 +37,7 @@
         <p>Второй вопрос</p>
         <button type="button" name="button" onclick="showHideTwo('reaction2')">Скрыть/Показать вопрос</button>
         <div id="reaction2" style="display: none;">
-          <audio src="ul-trazvuk-pisk.mp3" controls autoplay></audio><br>
+          <audio src="ul-trazvuk-pisk.mp3" controls></audio><br>
           <button type="button" name="button" onclick="reactionTwo('reaction2')">Нажмите сюда</button>
         </div>
         <div id="result2">
@@ -125,9 +125,16 @@
               <th>Результат3</th><th>Результат4</th><th>Результат5</th><th>Результат6</th>
               <th>Результат7</th>
             </tr>
-            <td><?php echo $_SESSION['id']; ?></td>
-            <td><?php echo $_SESSION['pol'] ?></td>
-            <td><?php echo $_SESSION['age'] ?></td>
+            <td><?php if(isset($_SESSION['id'])) {echo $_SESSION['id'];}
+            else echo mt_rand(); ?></td>
+            <td><?php
+            if(isset($_SESSION['pol'])) {echo $_SESSION['pol'];}
+            else echo mt_rand();
+             ?></td>
+            <td><?php
+            if(isset($_SESSION['age'])) {echo $_SESSION['age'];}
+            else echo mt_rand();
+             ?></td>
             <td><span id="span1"></span></td>
             <td><span id="span2"></span></td>
             <td><span id="span3"></span></td>

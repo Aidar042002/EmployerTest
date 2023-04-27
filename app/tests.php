@@ -14,7 +14,8 @@
         <!-- <li><a href="reaction.php">Реакции</a></li>
         <li><a href="reaction_old.php">Тест на реакции old</a></li>
         <li><a href="two.php">Тест js</a></li> -->
-        <li><a href="new.php">Тест на реакции</li>
+        <!-- <li><a href="new.php">Тест на реакции</li> последний-->
+        <li><a href="currentReaction.php">Тест на реакции</li>
       </ul>
     </div>
     <div class="footer">
