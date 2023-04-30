@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+html, body, span, h1, h2, h3, h4, h5, h6, p, a{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+.header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin:10px;
+}
+.setOfNumbers{
+
+}
+.clickButton{
+  padding:10px;
+  margin: 10px;
+  height: 70px;
+  width: 250px;
+  color:blue;
+  font-size: 20px;
+}
+.changeColorBlock1{
+  width: 400px;
+  height: 400px;
+  border:1px solid black;
+}
+.innerResult{
+  border:1px solid white;
+}
