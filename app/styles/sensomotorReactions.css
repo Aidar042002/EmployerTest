@@ -45,3 +45,12 @@ body {
 .innerResult{
   border:1px solid white;
 }
+.blocks{
+  display: inline-block;
+  text-align: center;
+}
+.block{
+  border:1px solid black;
+  width:150px;
+  height:150px;
+}
