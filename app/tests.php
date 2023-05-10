@@ -14,6 +14,9 @@
         <!-- <li><a href="new.php">Тест на реакции</li> последний-->
         <li><a href="currentReaction.php">Тест на реакции(последний)</li>
         <li><a href="reaction.php">Новый реакции</a></li>
+        <li><a href="php/analog.php">Тест на аналоговое движение, движение с преследованием</li>
+        <li><a href="php/thinking.php">Мышление</li>
+        <li><a href="t.html">test</li>
       </ul>
     </div>
     <div class="footer">

@@ -19,6 +19,9 @@ function clickButton(buttonId){
     default: alert('Exception.Reload page.');
   }
 }
+//
+var allCount=0;
+//
 //1
 var trueClickCount1=0;
 var falseClickCount1=0;
@@ -27,7 +30,7 @@ var startTime1;
 var stopTime1;
 var time1;
 var interval1;
-var times1=new Array(30);
+var times1=new Array(3);
 var sum1=0;
 var average1=0;
 var arrCount1;
@@ -93,7 +96,7 @@ function clickButtonOne(){
       }
       document.getElementById('innerResult1').innerHTML = 'Результаты: зачтено нажатий : '+trueClickCount1 +' , ложных : ' +falseClickCount1 + ', time : '+time1;
   }
-  if(trueClickCount1 == 30){
+  if(trueClickCount1 == 3){
     clearInterval(interval1);
     document.getElementById('changeColorBlock1').style.backgroundColor = 'white';
     for(let i=0; i<times1.length;i++){
@@ -104,6 +107,9 @@ function clickButtonOne(){
     document.getElementById('clickButton1').disabled = true;
     document.getElementById('testAttempt1').innerHTML = '';
     document.getElementById('innerResult1').innerHTML = 'Итоговый результат: зачтено нажатий : '+trueClickCount1 +' , ложных : ' +falseClickCount1 + ', average time : '+ average1.toFixed(2);
+    allCount++;
+    document.getElementById('progress').innerHTML = 'Выполнено реакций:'+allCount+'/5';
+    document.getElementById('r1').innerHTML = average1.toFixed(2);
   }
 }
 
@@ -192,6 +198,9 @@ function clickButtonTwo(){
       document.getElementById('startReaction2').disabled = true;
       document.getElementById('clickButton2').disabled = true;
       document.getElementById('innerResult2').innerHTML = 'Результаты: засчитано попыток:'+trueClickCount2+', ложных:'+falseClickCount2+", среднее время:"+average2.toFixed(2);
+      allCount++;
+      document.getElementById('progress').innerHTML = 'Выполнено реакций:'+allCount+'/5';
+      document.getElementById('r2').innerHTML = average2.toFixed(2);
     }
   }
 }
@@ -332,6 +341,9 @@ function changeColor(colorBlockId){
     document.getElementById('block1').style.backgroundColor = 'white';
     document.getElementById('block2').style.backgroundColor = 'white';
     document.getElementById('block3').style.backgroundColor = 'white';
+    allCount++;
+    document.getElementById('progress').innerHTML = 'Выполнено реакций:'+allCount+'/5';
+    document.getElementById('r3').innerHTML = average3.toFixed(2);
     }
   }
 }
@@ -431,7 +443,9 @@ function clickButtonFour(digitId40){
       clearInterval(interval4);
       audioTwo.pause();
       document.getElementById('testAttempt4').innerHTML = '';
-
+      allCount++;
+      document.getElementById('progress').innerHTML = 'Выполнено реакций:'+allCount+'/5';
+      document.getElementById('r4').innerHTML = average4.toFixed(2);
       }
   }
 }
@@ -533,11 +547,22 @@ function clickButtonFive(digitId5){
       clearInterval(interval5);
       document.getElementById('addDigits').style.display ='none';
       document.getElementById('testAttempt4').innerHTML = '';
+      allCount++;
+      document.getElementById('progress').innerHTML = 'Выполнено реакций:'+allCount+'/5';
+      document.getElementById('r5').innerHTML = average5.toFixed(2);
     }
   }
 }
 
 //5 stop
+
+//resultTable
+function resultTable(){
+  hideAllButtons();
+  document.getElementById('reactionTable').style.display = 'block';
+
+}
+//
 
 function hideAllButtons(){
   document.getElementById('buttonReaction1').style.display = 'none';
@@ -545,6 +570,7 @@ function hideAllButtons(){
   document.getElementById('buttonReaction3').style.display = 'none';
   document.getElementById('buttonReaction4').style.display = 'none';
   document.getElementById('buttonReaction5').style.display = 'none';
+  document.getElementById('resultTable').style.display = 'none';
 }
 
 function showAllButtons(){
@@ -553,10 +579,12 @@ function showAllButtons(){
   document.getElementById('reaction3').style.display = 'none';
   document.getElementById('reaction4').style.display = 'none';
   document.getElementById('reaction5').style.display = 'none';
+  document.getElementById('reactionTable').style.display = 'none';
 
   document.getElementById('buttonReaction1').style.display = 'block';
   document.getElementById('buttonReaction2').style.display = 'block';
   document.getElementById('buttonReaction3').style.display = 'block';
   document.getElementById('buttonReaction4').style.display = 'block';
   document.getElementById('buttonReaction5').style.display = 'block';
+  document.getElementById('resultTable').style.display = 'block';
 }

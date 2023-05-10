@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/sensomotorReactions.css">
   </head>
   <body>
+    <?php session_start(); ?>
 
     <div class="header">
       <h1>Тест на сенсомоторные реакции</h1>
@@ -15,6 +16,10 @@
 
       <div class="buttons">
         <div class="setOfNumbers">
+          <div id="progress" class="clickButton" style="width:250px;border:1px solid black;text-align:center;">
+              Проверено реакций:0/5
+          </div>
+
           <!--1-->
           <button id="buttonReaction1" class="clickButton" type="button" name="button" onclick="clickButton(this)">Реакция на свет</button><br>
             <div id="reaction1" style="display:none;">
@@ -102,6 +107,29 @@
             <div id='result55'></div>
             <div id="innerResult5"></div>
           </div>
+
+          <!-- -->
+          <button id="resultTable" class="clickButton" type="button" name="button" onclick="resultTable()">Результаты</button>
+          <div id='reactionTable' style="display:none;">
+            <table class="tableResult">
+              <tr>
+                <th>id</th><th>pol</th><th>age</th>
+                <th>result1</th><th>result2</th><th>result3</th><th>result4</th><th>result5</th>
+              </tr>
+              <tr>
+                <td><?php echo $_SESSION['id']; ?></td>
+                <td><?php echo $_SESSION['pol']; ?></td>
+                <td><?php echo $_SESSION['age']; ?></td>
+                <td id="r1"></td>
+                <td id="r2"></td>
+                <td id="r3"></td>
+                <td id="r4"></td>
+                <td id="r5"></td>
+              </tr>
+            </table>
+            <br><button type="button" name="button" onclick="showAllButtons()">Назад к выбору теста</button>
+          </div>
+          <!-- -->
         </div>
       </div>
 

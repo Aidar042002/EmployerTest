@@ -24,14 +24,14 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin:10px;
+  margin:5px;
 }
 .setOfNumbers{
 
 }
 .clickButton{
   padding:10px;
-  margin: 10px;
+  margin: 5px;
   height: 70px;
   width: 250px;
   color:blue;
@@ -53,4 +53,12 @@ body {
   border:1px solid black;
   width:150px;
   height:150px;
+}
+.tableResult{
+  width:300px;
+  border-collapse: collapse;
+}
+td, th{
+  padding:3px;
+  border:1px solid black;
 }

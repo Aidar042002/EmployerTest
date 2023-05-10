@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+html, body, span, h1, h2, h3, h4, h5, h6, p, a{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.header{
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+
+.main{
+
+}
+
+.footer{
+
+}
+
+.test div{
+  /* display: flex; */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding:1px;
+  margin:1px;
+}
+
+button {
+  color: white;
+  background-color: blue;
+  font-size: 15px;
+}
+.button{
+  color: white;
+  background-color: blue;
+  font-size: 15px;
+}
