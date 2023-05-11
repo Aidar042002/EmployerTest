@@ -23,31 +23,25 @@
         </div>
         <div id="reaction1" class="reactions" style="display:none;">
           <div id="question1">1)Дан ряд чисел 2, 4, 8, 16, 32... <br>Напишите следующий элемент</div>
-          <input id="input1" type="text">
-          <input id="button1" type="button" value="Отправить">
-          <div id="result1"></div>
+          <input id="input1" type="text"><br>
           <input id="next1" type="button" value="Далее">
         </div>
 
         <div id="reaction2" style="display:none;">
           <div id="question2">2)Задание на аналогии.<br>Дана пара слов 'Физика-наука' <br>
-          Напишите номер аналога, то есть пары слов связанных с предыдущей такой же логической связью
-          <br>1.Овца-стадо
-          <br>2.Малина-ягода
-          <br>3.Море-океан
-          <br>4.Свет-темнота
+          Выберите номер аналога, то есть пары слов связанных с предыдущей такой же логической связью<br>
+          <input id="21" type="radio" name="radio2" value="Овца-стадо" onclick="answerTwo('21')">Овца-стадо<br>
+          <input id="22" type="radio" name="radio2" value="Малина-ягода" onclick="answerTwo('22')">Малина-ягода<br>
+          <input id="23" type="radio" name="radio2" value="Море-океан" onclick="answerTwo('23')">Море-океан<br>
+          <input id="24" type="radio" name="radio2" value="Свет-темнота" onclick="answerTwo('24')">Свет-темнота<br>
+
           </div>
-          <input id="input2" type="text">
-          <input id="button2" type="button" value="Отправить">
-          <div id="result2"></div>
-          <input id="next2" type="button" value="Далее">
+
         </div>
 
         <div id="reaction3" style="display:none;">
           <div id="question3">3)Дан ряд чисел 500, 400, 300, 200... <br>Напишите следующий элемент</div>
           <input id="input3" type="text">
-          <input id="button3" type="button" value="Отправить">
-          <div id="result3"></div>
           <input id="next3" type="button" value="Далее">
         </div>
 
@@ -59,53 +53,41 @@
               Так, например, строке ! * - ! соответствует слово 'грог',<br>
               (первая и последняя буквы одинаковы, а остальные - разные)<br>
               Даны условные знаки: ! x + x <br>
-              Установите закономерность со словом и укажите номер слова<br>
-              1.Рана<br>
-              2.Клад<br>
-              3.Пила<br>
-              4.Вода<br>
-              <input id="input4" type="text">
-              <input id="button4" type="button" value="Отправить">
-              <div id="result4"></div>
-              <input id="next4" type="button" value="Далее">
+              Установите закономерность со словом и выберите номер слова<br>
+              <input id="41" type="radio" name="radio4" onclick="answerFour('41')">Рана<br>
+              <input id="42" type="radio" name="radio4" onclick="answerFour('42')">Клад<br>
+              <input id="43" type="radio" name="radio4" onclick="answerFour('43')">Пила<br>
+              <input id="44" type="radio" name="radio4" onclick="answerFour('44')">Вода<br>
             </div>
         </div>
 
         <div id="reaction5" style="display:none;">
           <div id="question5">5)Дана последовательность фибоначчи:0, 1, 1, 2, 3, 5, 8, 13, 21, 34...<br>Укажите следующий элемент</div>
           <input id="input5" type="text">
-          <input id="button5" type="button" value="Отправить">
-          <div id="result5"></div>
           <input id="next5" type="button" value="Далее">
         </div>
 
         <div id="reaction6" style="display:none;">
           <div id="question6">6)Дана последовательность чисел:3,9,27,81...<br>Укажите следующий элемент</div>
           <input id="input6" type="text">
-          <input id="button6" type="button" value="Отправить">
-          <div id="result6"></div>
           <input id="next6" type="button" value="Далее">
         </div>
 
         <div id="reaction7" style="display:none;">
           <div id="question7">7)Установите закономерность и укажите номер:
           <br>Занятием противоположным отдыху является:<br>
-          1.Забота<br>
-          2.Труд<br>
-          3.Усталость<br>
-          4.Прогулка<br>
+          <input id="71" type="radio" name="radio7" onclick="answerSeven('71')">Забота<br>
+          <input id="72" type="radio" name="radio7" onclick="answerSeven('72')">Труд<br>
+          <input id="73" type="radio" name="radio7" onclick="answerSeven('73')">Усталость<br>
+          <input id="74" type="radio" name="radio7" onclick="answerSeven('74')">Прогулка<br>
+
           </div>
-          <input id="input7" type="text">
-          <input id="button7" type="button" value="Отправить">
-          <div id="result7"></div>
-          <input id="next7" type="button" value="Далее">
+
         </div>
 
         <div id="reaction8" style="display:none;">
           <div id="question8">8)Продолжите числовой ряд:972,875,788,710...</div>
           <input id="input8" type="text">
-          <input id="button8" type="button" value="Отправить">
-          <div id="result8"></div>
           <input id="next8" type="button" value="Далее">
         </div>
 
@@ -113,22 +95,16 @@
           <div id="question9">9)Классификация.<br>
             Даны два слова, определите принадлежность к одному классу понятий<br>
             Два слова - хлеб, масло .Укажите номер:<br>
-            1.Море<br>
-            2.Пища<br>
-            3.Город<br>
-            4.Поле<br>
+            <input id="91" type="radio" name="radio9" onclick="answerNine('91')">Море<br>
+            <input id="92" type="radio" name="radio9" onclick="answerNine('92')">Пища<br>
+            <input id="93" type="radio" name="radio9" onclick="answerNine('93')">Город<br>
+            <input id="94" type="radio" name="radio9" onclick="answerNine('94')">Поле<br>
           </div>
-          <input id="input9" type="text">
-          <input id="button9" type="button" value="Отправить">
-          <div id="result9"></div>
-          <input id="next9" type="button" value="Далее">
         </div>
 
         <div id="reaction10" style="display:none;">
           <div id="question10">10)Продолжите числовой ряд:4,6,12,18,30,42...</div>
           <input id="input10" type="text">
-          <input id="button10" type="button" value="Отправить">
-          <div id="result10"></div>
           <input id="next10" type="button" value="Завершить">
         </div>
 
