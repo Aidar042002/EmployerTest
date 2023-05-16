@@ -17,6 +17,7 @@
         <li><a href="php/analog.php">Тест на аналоговое движение, движение с преследованием</li>
         <li><a href="php/thinking.php">Мышление</li>
         <li><a href="t.html">test</li>
+        <li><a href="php/attention.php">Внимание</li>
       </ul>
     </div>
     <div class="footer">
